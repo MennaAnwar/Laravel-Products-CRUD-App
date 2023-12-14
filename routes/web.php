@@ -15,8 +15,21 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return redirect()->route('products.index');
 });
 
 
+Route::get('/home', function () {
+    //return view('welcome');
+    return redirect()->route('products.index');
+});
+
+
+//Route::resource('products',ProductController::class)->middleware('auth');
 Route::resource('products',ProductController::class);
+
+
+Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+/*     public function __construct() {
+        // auth for all except main page ad showing data
+        //$this->middleware('auth')->except(['index','show']);
+        //or
+        // auth only for creating, editing or deleting
+        $this->middleware('auth')->only(['store', 'create', 'edit','delete','update']);
+    } */
     /**
      * Display a listing of the resource.
      */
